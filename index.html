@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HOTEL YO:ON | Stay Your Own, Stay On</title>
+    <meta
+      name="description"
+      content="온전한 나로 머무는 HOTEL YO:ON의 어반 웰니스 스테이."
+    />
+    <meta property="og:title" content="HOTEL YO:ON | Stay Your Own, Stay On" />
+    <meta
+      property="og:description"
+      content="온전한 나로 머무는 어반 웰니스 스테이. HOTEL YO:ON의 객실과 웰니스 리추얼을 만나보세요."
+    />
+    <meta property="og:image" content="assets/yoon-hero-pool.png" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#15130f" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="preload" as="video" href="assets/main-hero.mp4" type="video/mp4" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "HOTEL YO:ON",
+        "description": "An urban wellness hotel designed to help guests return to their own rhythm.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "27, Yoon-ro, Jung-gu",
+          "addressLocality": "Seoul",
+          "addressCountry": "KR"
+        },
+        "telephone": "+82-2-0000-0000",
+        "email": "stay@hotelyoon.kr"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="HOTEL YO:ON 홈">
+        <img class="brand-logo" src="assets/logo-yoon-header.png" alt="HOTEL YO:ON" />
+      </a>
+
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a href="#stay-modes">Stay Modes</a>
+        <a href="#wellness">Rituals</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-book" href="#booking">Book</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#booking">Book</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/yoon-hero-pool.png" data-hero-video>
+            <source src="assets/main-hero.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="hero-content" data-reveal>
+          <h1 id="hero-title">Stay Your Own, Stay On</h1>
+          <span>온전한 나로 머무는 어반 웰니스 스테이</span>
+          <div class="hero-actions">
+            <a href="#booking">Book your stay</a>
+            <button class="hero-control" type="button" data-hero-toggle aria-label="메인 영상 일시정지">
+              <span class="hero-control-icon" aria-hidden="true"></span>
+              <span class="visually-hidden" data-hero-toggle-label>Pause</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="reservation-panel" id="booking" aria-labelledby="booking-title" data-reveal>
+        <div>
+          <p>BOOK</p>
+          <h2 id="booking-title">Plan a Quieter Stay.</h2>
+          <p class="reservation-title-ko">나에게 맞는 휴식 모드를 선택하세요</p>
+          <a class="reservation-link" href="#stay-modes">휴식 모드 살펴보기</a>
+        </div>
+        <form class="booking-form" data-booking-form>
+          <label>
+            <span>지점</span>
+            <select name="destination">
+              <option selected>서울 명동</option>
+              <option>부산 해운대</option>
+              <option>제주 서귀포</option>
+            </select>
+          </label>
+          <label>
+            <span>체크인</span>
+            <input type="date" name="checkin" required />
+          </label>
+          <label>
+            <span>체크아웃</span>
+            <input type="date" name="checkout" required />
+          </label>
+          <label>
+            <span>인원</span>
+            <select name="guests">
+              <option>성인 1명</option>
+              <option selected>성인 2명</option>
+              <option>성인 3명</option>
+              <option>성인 4명</option>
+              <option>성인 5명</option>
+            </select>
+          </label>
+          <label>
+            <span>휴식 모드</span>
+            <select name="stayMode" data-stay-mode-select>
+              <option value="calm" selected>Calm Mode</option>
+              <option value="focus">Focus Mode</option>
+              <option value="recharge">Recharge Mode</option>
+              <option value="lounge">Lounge Mode</option>
+            </select>
+          </label>
+          <label>
+            <span>추천 객실</span>
+            <select name="roomType" data-room-select>
+              <option value="yoon" selected>YO:ON Room</option>
+              <option value="pause">Pause Studio</option>
+              <option value="suite">ON Suite</option>
+            </select>
+          </label>
+          <button type="submit">예약 가능 여부 확인</button>
+          <div class="stay-mode-card" data-stay-mode-card>
+            <div>
+              <span>휴식 모드</span>
+              <strong data-stay-mode-name>Calm Mode</strong>
+            </div>
+            <div>
+              <span>추천 상황</span>
+              <p data-stay-mode-state>온전히 쉬고 싶은 날</p>
+            </div>
+            <div>
+              <span>준비되는 경험</span>
+              <p data-stay-mode-experience>허브티, 저조도 조명, 차분한 음악</p>
+            </div>
+          </div>
+          <div class="room-recommend-card" data-room-recommend-card>
+            <div>
+              <span>추천 객실</span>
+              <strong data-recommended-room-name>YO:ON Room</strong>
+            </div>
+            <div>
+              <span>객실 특징</span>
+              <p data-recommended-room-copy>조용한 휴식과 수면 루틴에 집중한 기본 객실</p>
+            </div>
+            <div>
+              <span>1박 기준</span>
+              <p data-recommended-room-meta>26 sqm · City view · KRW 240,000부터</p>
+            </div>
+          </div>
+          <p class="form-note" data-form-note aria-live="polite"></p>
+        </form>
+        <div class="reservation-note">
+          <span>체크인 15:00</span>
+          <span>체크아웃 11:00</span>
+          <span>웰니스 프로그램은 사전 예약을 권장합니다.</span>
+        </div>
+      </section>
+
+      <section class="mode-detail-section home-stay-modes" id="stay-modes" aria-labelledby="home-mode-list-title">
+        <div class="section-heading" data-reveal>
+          <p>Stay Modes</p>
+          <h2 id="home-mode-list-title">Choose your way to rest.</h2>
+          <p class="title-ko">나에게 맞는 휴식 모드를 선택하세요</p>
+        </div>
+
+        <div class="mode-cards mode-cards-visual" data-reveal>
+          <article>
+            <img
+              src="assets/mode-calm.png"
+              alt="허브티와 낮은 조명이 있는 HOTEL YO:ON Calm Mode 객실"
+              loading="lazy"
+            />
+            <span>01</span>
+            <h3>Calm Mode</h3>
+            <strong>온전히 쉬고 싶은 날</strong>
+            <p>
+              객실의 조도와 사운드를 낮추고, 따뜻한 허브티를 곁들입니다. 혼자만의
+              고요한 휴식이 필요한 날에 어울립니다.
+            </p>
+            <em>허브티 · 저조도 조명 · 차분한 음악</em>
+          </article>
+          <article>
+            <img
+              src="assets/mode-focus.png"
+              alt="데스크 세팅과 집중 조명이 있는 HOTEL YO:ON Focus Mode 객실"
+              loading="lazy"
+            />
+            <span>02</span>
+            <h3>Focus Mode</h3>
+            <strong>일과 휴식의 균형이 필요한 날</strong>
+            <p>
+              업무에 집중할 수 있는 데스크 환경과 조명으로 출장 중에도 일과 휴식의 흐름을
+              편안하게 이어갈 수 있습니다.
+            </p>
+            <em>데스크 세팅 · 집중 조명 · 미니 문구 키트</em>
+          </article>
+          <article>
+            <img
+              src="assets/mode-recharge.png"
+              alt="배스 솔트와 아로마가 준비된 HOTEL YO:ON Recharge Mode 배스 공간"
+              loading="lazy"
+            />
+            <span>03</span>
+            <h3>Recharge Mode</h3>
+            <strong>몸의 피로를 내려놓고 싶은 날</strong>
+            <p>
+              따뜻한 배스와 아로마, 수면 루틴을 통해 하루의 긴장을 풀어냅니다. 몸과 마음을
+              깊이 쉬게 하고 싶은 날에 추천합니다.
+            </p>
+            <em>배스 솔트 · 아로마 · 수면 루틴</em>
+          </article>
+          <article>
+            <img
+              src="assets/mode-social.png"
+              alt="라운지와 바 메뉴가 놓인 HOTEL YO:ON Lounge Mode 공간"
+              loading="lazy"
+            />
+            <span>04</span>
+            <h3>Lounge Mode</h3>
+            <strong>가벼운 모임과 대화가 필요한 날</strong>
+            <p>
+              라운지와 바, 주변의 조용한 로컬 스폿을 안내드리며, 혼자 또는 함께 저녁을
+              여유롭게 보내고 싶을 때 어울립니다.
+            </p>
+            <em>라운지 안내 · 바 메뉴 · 로컬 큐레이션</em>
+          </article>
+        </div>
+      </section>
+
+      <section class="image-feature image-feature-dark" id="wellness" aria-labelledby="ritual-title" data-reveal>
+        <div class="feature-media">
+          <img
+            src="assets/yoon-treatment-room.png"
+            alt="따뜻한 조명과 도시 전망이 있는 HOTEL YO:ON 트리트먼트 룸"
+            loading="lazy"
+          />
+        </div>
+        <div class="feature-copy">
+          <p>Rituals</p>
+          <h2 id="ritual-title">The Day Softens, Slowly.</h2>
+          <p class="title-ko">따뜻한 물과 향, 티 한 잔이 하루의 속도를 천천히 늦춰줍니다.</p>
+          <ul>
+            <li>
+              <span>01</span>
+              <strong>Arrival Pause</strong>
+              <p>객실에 들어서는 순간, 은은한 향과 웰컴 티가 하루 종일 쌓인 긴장을 부드럽게 풀어줍니다.</p>
+            </li>
+            <li>
+              <span>02</span>
+              <strong>Recovery Bath</strong>
+              <p>따뜻한 배스와 은은한 조도가 하루의 피로를 조용히 풀어줍니다.</p>
+            </li>
+            <li>
+              <span>03</span>
+              <strong>Sleep Ritual</strong>
+              <p>아로마와 음악, 수면 카드가 깊이 잠들 수 있도록 도와줍니다.</p>
+            </li>
+          </ul>
+          <a class="quiet-link" href="assets/HOTEL_YOON_Wellness_Menu.pdf" download="Hotel YOON_Wellness Menu.pdf">
+            Download wellness menu
+          </a>
+        </div>
+      </section>
+
+      <section class="section facilities-section" id="facilities" aria-labelledby="facilities-title">
+        <div class="section-heading" data-reveal>
+          <p>Facilities</p>
+          <h2 id="facilities-title">Spaces For Breath, Water, And Rest.</h2>
+          <p class="title-ko">마음 편히 쉬어가는 공간</p>
+        </div>
+        <div class="wide-image" data-reveal>
+          <img
+            src="assets/yoon-movement-studio.png"
+            alt="도시 전망과 나무 바닥이 있는 HOTEL YO:ON 무브먼트 스튜디오"
+            loading="lazy"
+          />
+        </div>
+        <div class="quiet-list" data-reveal>
+          <article>
+            <span>01</span>
+            <h3>Breath Studio</h3>
+            <p>가벼운 호흡과 스트레칭으로 몸을 천천히 깨웁니다.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Quiet Lounge</h3>
+            <p>차 한 잔을 곁에 두고, 체크인 전후 시간을 여유롭게 보냅니다.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Tea Bar</h3>
+            <p>오늘의 기분과 몸 상태에 맞춰 따뜻한 블렌딩 티를 제안합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="image-feature" id="rooms" aria-labelledby="rooms-title" data-reveal>
+        <div class="feature-copy">
+          <p>Rooms</p>
+          <h2 id="rooms-title">Rest with the City in View.</h2>
+          <p class="title-ko">도시를 바라보며 쉬어가는 공간</p>
+          <p>
+            객실은 과한 장식보다 낮은 조도, 좋은 소재, 편안한 동선을 우선시합니다. 짧게
+            머무는 동안에도 편안해지도록 티 세트와 수면 리추얼을 함께 준비했습니다.
+          </p>
+          <div class="room-table">
+            <button type="button" class="is-active" data-room="yoon" aria-pressed="true">
+              YO:ON Room
+            </button>
+            <button type="button" data-room="pause" aria-pressed="false">Pause Studio</button>
+            <button type="button" data-room="suite" aria-pressed="false">ON Suite</button>
+          </div>
+          <div class="room-info" data-room-info>
+            <p class="room-description" data-room-description>
+              짧은 도심 체류를 위한 기본 객실로, 조용한 수면과 티 루틴에 집중합니다.
+            </p>
+            <p class="room-meta" data-room-note>26 sqm · City view · 1-2 guests</p>
+            <p class="room-price" data-room-price><span>from</span> KRW 240,000</p>
+          </div>
+          <p class="room-subnote">Every room includes tea set, sleep ritual card, and quiet lighting.</p>
+        </div>
+        <div class="feature-media">
+          <img
+            data-room-image
+            src="assets/yoon-room-wide.png"
+            alt="도시 전망과 차분한 조명을 갖춘 HOTEL YO:ON 객실"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section class="closing-section" id="contact" aria-labelledby="closing-title" data-reveal>
+        <p>Contact</p>
+        <h2 id="closing-title">Stay Close To The City, Closer To Yourself.</h2>
+        <p class="title-ko">예약 전 궁금한 점은 언제든 편하게 문의해주세요</p>
+        <div class="contact-grid">
+          <div>
+            <span>Address</span>
+            <p>27, Yoon-ro, Jung-gu, Seoul, Korea</p>
+          </div>
+          <div>
+            <span>Contact</span>
+            <p>+82 2 0000 0000<br />stay@hotelyoon.kr</p>
+          </div>
+          <div>
+            <span>Wellness Menu</span>
+            <p><a href="assets/HOTEL_YOON_Wellness_Menu.pdf" download="Hotel YOON_Wellness Menu.pdf">Download PDF</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>HOTEL YO:ON</span>
+      <p>Stay Your Own, Stay On</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
