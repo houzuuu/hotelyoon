@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="HOTEL YO:ON">
+  <rect width="64" height="64" fill="#f4f1eb"/>
+  <path d="M18 52V25c0-11 8-18 14-18s14 7 14 18v27" fill="none" stroke="#161513" stroke-width="5" stroke-linecap="square"/>
+  <path d="M20 9l12 30L44 9M32 39v13M14 52h36" fill="none" stroke="#161513" stroke-width="5" stroke-linecap="square" stroke-linejoin="round"/>
+</svg>
